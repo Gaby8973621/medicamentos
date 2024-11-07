@@ -1,0 +1,107 @@
+/* Video de fondo */
+ .video-background {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .register-card {
+    background: rgba(255, 255, 255, 0.9); /* Transparencia para resaltar el contenido sobre el video */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 400px;
+  }
+  
+  .logo {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+  
+  .inspirational-quote {
+    font-style: italic;
+    color: #6f2c91;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  input {
+    width: calc(100% - 10px);
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #d1c4e9;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #4a148c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #6f2c91;
+  }
+  
+  .login-prompt {
+    margin-top: 15px;
+  }
+  
+  .login-link {
+    color: #4a148c;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  .register-card {
+    background: rgba(255, 255, 255, 0.9); /* Transparencia para resaltar el contenido sobre el video */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 400px;
+    position: relative; /* Necesario para agregar el borde */
+  }
+  
+  .register-card::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 15px;
+    background: linear-gradient(to right, #0184b0, #32CD32, #FFD700, #FFA500);
+    z-index: -1; /* Para que el borde esté detrás del contenido */
+  }

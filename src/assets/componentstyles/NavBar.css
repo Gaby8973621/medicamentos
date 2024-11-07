@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400&display=swap');
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #d1c4e9, #f3e5f5);
+  padding: 20px;
+  border-bottom: 2px solid #508c14;
+  position: relative;
+  min-height: 250px;
+}
+
+.university-title {
+  font-size: 2.4rem;
+  color: #487308;
+  margin-bottom: 5px;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+}
+
+.navbar-title {
+  font-size: 1.70rem;
+  color: #4a148c;
+  margin-bottom: 10px;
+  font-family: 'Lora', serif;
+}
+
+/* Botones principales visibles */
+.navbar-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 2; /* Asegura que los botones estén sobre los demás elementos */
+}
+
+.nav-button {
+  background-color: #4a148c;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid transparent;
+}
+
+.nav-button:hover {
+  background-color: #6a1b9a;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid #fff;
+}
+
+/* Botón de Salir específico */
+.exit-button {
+  background-color: #c62828; /* Rojo para destacar el botón de Salir */
+}
+
+.exit-button:hover {
+  background-color: #e53935;
+}
+
+/* Menú hamburguesa */
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px; 
+  right: 20px;
+  z-index: 3; 
+}
+
+.hamburger-menu span {
+  width: 100%;
+  height: 3px;
+  background-color: #4a148c;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-menu:hover span {
+  background-color: #6a1b9a;
+}
+
+/* Menú desplegable animado con pastillas */
+.navbar-links-float {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 100;
+  box-shadow: none;
+}
+
+.navbar-links-float.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.pill {
+  animation: float 0.6s ease-in-out forwards;
+  transform: translateY(50px);
+}
+
+.pill:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.pill:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Línea de colores */
+.color-line {
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right,#000f6d, #0184b0, #32CD32, #FFD700, #FFA500);
+  position: absolute;
+  bottom: 0;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .navbar-links-float {
+    display: block;
+  }
+}

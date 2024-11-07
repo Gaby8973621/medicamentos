@@ -1,0 +1,221 @@
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Modo Claro */
+  .admin-container.light {
+    background-color: #f3e5f5;
+    color: #000;
+  }
+  
+  /* Modo Oscuro */
+  .admin-container.dark {
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  /* Botón de tema */
+  .theme-toggle-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .theme-toggle-button img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: #6f2c91;
+    margin-bottom: 20px;
+  }
+  
+  .medicamento-card {
+    width: 100%;
+    max-width: 800px; /* Ancho más grande */
+    background: white;
+    padding: 30px; /* Aumento de padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Asegura que los elementos ocupen todo el ancho */
+  }
+  
+  .medicamento-form {
+    width: 100%; /* Ocupa todo el ancho */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4a148c;
+  }
+  
+  .form-input {
+    width: calc(100% - 10px);
+    padding: 10px;
+    border: 1px solid #d1c4e9;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .cantidad-input {
+    font-size: 20px; /* Tamaño aumentado para la cantidad */
+  }
+  
+  .submit-button {
+    background-color: #4a148c;
+    color: white;
+    padding: 15px; /* Aumento en el padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px; /* Tamaño de fuente aumentado */
+    transition: background-color 0.3s, transform 0.2s; /* Agregado efecto de transformación */
+  }
+  
+  .submit-button:hover {
+    background-color: #6f2c91; /* Color más claro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+  }
+  
+  .medicamento-table {
+    width: 100%; /* Ocupa todo el ancho */
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .medicamento-table th,
+  .medicamento-table td {
+    border: 1px solid #d1c4e9;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .medicamento-table th {
+    background-color: #4a148c;
+    color: white;
+  }
+  
+  .pill-icon {
+    width: 20px;
+    margin-right: 5px;
+  }
+  
+  .cantidad {
+    font-weight: bold;
+  }
+  
+  .descripcion {
+    color: #4a148c; /* Color para la descripción */
+  }
+  
+  .fecha {
+    color: #4a148c; /* Color para la fecha */
+  }
+  
+  .remove-button {
+    background-color: #d32f2f; /* Rojo */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s; /* Agregado efecto de transformación */
+  }
+  
+  .remove-button:hover {
+    background-color: #c62828; /* Color más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+  }
+  
+  .show-solicitudes-button {
+    background-color: #00796b; /* Verde oscuro */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s; /* Agregado efecto de transformación */
+  }
+  
+  .show-solicitudes-button:hover {
+    background-color: #004d40; /* Color más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+  }
+  
+  .solicitudes-container {
+    width: 100%;
+    max-width: 800px; /* Ancho del contenedor de solicitudes */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .solicitudes-card {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f3e5f5; /* Fondo suave */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s; /* Animación de entrada */
+  }
+  
+  .solicitudes-table {
+    width: 100%; /* Ocupa todo el ancho */
+    border-collapse: collapse;
+  }
+  
+  .solicitudes-table th,
+  .solicitudes-table td {
+    border: 1px solid #d1c4e9;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .solicitud-row:hover {
+    background-color: #e1bee7; /* Color de fondo al pasar el ratón */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }

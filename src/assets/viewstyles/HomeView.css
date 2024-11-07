@@ -1,0 +1,127 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #f3e5f5, #d1c4e9);
+    color: #4a148c;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .welcome-message {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-message h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-message p {
+    font-size: 1.2rem;
+  }
+  
+  .welcome-message:hover {
+    transform: translateY(-5px);
+  }
+  
+  .enter-button {
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .enter-button:hover {
+    background-color: #6a1b9a;
+    transform: scale(1.05);
+  }
+  
+  
+  .features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .feature {
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .feature img {
+    width: 50px;
+    margin-bottom: 10px;
+    cursor: pointer; /* Cambiar el cursor cuando se pase el mouse sobre el icono */
+  }
+  
+  .feature:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Redes sociales */
+  .social-media {
+    display: flex;
+    flex-direction: column; /* Asegura que el texto esté arriba de los íconos */
+    align-items: center; /* Centra los elementos */
+    margin-top: 20px;
+  }
+  
+  .social-media h2 {
+    margin-bottom: 10px; /* Espacio entre el título y los íconos */
+    color: #4a148c; /* Color del texto */
+  }
+  
+  .social-icons {
+    display: flex; /* Alinea los íconos en una línea horizontal */
+    gap: 15px; /* Espacio entre íconos */
+  }
+  
+  .social-icon {
+    transition: transform 0.3s; /* Transición para el efecto de zoom */
+  }
+  
+  .social-icon img {
+    width: 50px;
+    transition: transform 0.3s; /* Añade transición para el zoom */
+  }
+  
+  .social-icon:hover img {
+    transform: scale(1.2); /* Aumentar tamaño al pasar el mouse */
+  }
+  .welcome-message {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    position: relative; /* Necesario para agregar el borde de colores */
+  }
+  
+  .welcome-message::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #162cba ,#0184b0, #32CD32, #FFD700, #FFA500);
+    z-index: -1; /* Para que el borde quede detrás del contenido */
+  }
